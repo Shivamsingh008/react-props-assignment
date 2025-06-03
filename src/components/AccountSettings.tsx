@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 
 interface AccountSettingsProps {
-  onNavigate: (page: 'welcome' | 'register' | 'account') => void;
+  onNavigate: (page: 'welcome' | 'register' | 'account' | 'login') => void;
   userInfo: any;
 }
 

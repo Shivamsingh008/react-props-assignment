@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 interface RegisterPageProps {
-  onNavigate: (page: 'welcome' | 'register' | 'account', userData?: any) => void;
+  onNavigate: (page: 'welcome' | 'register' | 'account' | 'login', userData?: any) => void;
 }
 
 const RegisterPage = ({ onNavigate }: RegisterPageProps) => {
@@ -138,6 +138,16 @@ const RegisterPage = ({ onNavigate }: RegisterPageProps) => {
         >
           Create Account
         </Button>
+
+        <div className="text-center mt-4">
+          <button
+            type="button"
+            onClick={() => onNavigate('login')}
+            className="text-purple-600 text-sm hover:underline"
+          >
+            Already have an account? Login
+          </button>
+        </div>
       </form>
     </div>
   );

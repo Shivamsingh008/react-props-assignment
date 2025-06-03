@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 
 interface WelcomePageProps {
-  onNavigate: (page: 'welcome' | 'register' | 'account') => void;
+  onNavigate: (page: 'welcome' | 'register' | 'account' | 'login') => void;
 }
 
 const WelcomePage = ({ onNavigate }: WelcomePageProps) => {
@@ -25,7 +25,7 @@ const WelcomePage = ({ onNavigate }: WelcomePageProps) => {
           </Button>
           
           <Button 
-            onClick={() => onNavigate('register')}
+            onClick={() => onNavigate('login')}
             variant="outline"
             className="w-full bg-purple-100 hover:bg-purple-200 text-purple-600 font-medium py-3 rounded-lg border-purple-200 transition-colors"
           >
