@@ -1,11 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from "react";
+import WelcomePage from "../components/WelcomePage";
+import RegisterPage from "../components/RegisterPage";
+import AccountSettings from "../components/AccountSettings";
 
 const Index = () => {
+  const [currentPage, setCurrentPage] = useState<'welcome' | 'register' | 'account'>('welcome');
+  const [userInfo, setUserInfo] = useState<any>(null);
+
+  const handleNavigation = (page: 'welcome' | 'register' | 'account', userData?: any) => {
+    setCurrentPage(page);
+    if (userData) {
+      setUserInfo(userData);
+    }
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
+        {currentPage === 'welcome' && (
+          <WelcomePage onNavigate={handleNavigation} />
+        )}
+        {currentPage === 'register' && (
+          <RegisterPage onNavigate={handleNavigation} />
+        )}
+        {currentPage === 'account' && (
+          <AccountSettings onNavigate={handleNavigation} userInfo={userInfo} />
+        )}
       </div>
     </div>
   );
