@@ -27,13 +27,13 @@ const AccountSettings = ({ onNavigate, userInfo }: AccountSettingsProps) => {
         </div>
         <div className="flex-1">
           <h2 className="font-semibold text-gray-900">
-            {userInfo?.fullName || 'Marry Doe'}
+            {userInfo?.fullName || 'shivam'}
           </h2>
           <p className="text-gray-600 text-sm">
-            {userInfo?.email || 'Marry@Gmail.Com'}
+            {userInfo?.email || 'shivam@Gmail.Com'}
           </p>
           <p className="text-purple-600 text-xs mt-1">
-            {userInfo?.isAgency === 'yes' ? 'Agency' : 'Individual'} - {userInfo?.companyName || 'Doe Company'}
+            {userInfo?.isAgency === 'yes' ? 'Agency' : 'Individual'} - {userInfo?.companyName || 'tech Company'}
           </p>
         </div>
       </div>

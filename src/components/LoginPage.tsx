@@ -25,7 +25,7 @@ const LoginPage = ({ onNavigate }: LoginPageProps) => {
     e.preventDefault();
     // Mock login - in real app, you'd verify credentials
     const mockUserData = {
-      fullName: 'John Doe',
+      fullName: 'shivam raj',
       email: formData.email,
       phoneNumber: '+1234567890',
       companyName: 'Tech Corp',
